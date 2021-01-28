@@ -6,7 +6,7 @@ import java.util.List;
 
 public class PrimeFinderThread extends Thread{
 
-	boolean suspender=false;
+	private static boolean suspender=false;
 	int a,b;
 	
 	private List<Integer> primes=new LinkedList<Integer>();
@@ -48,8 +48,8 @@ public class PrimeFinderThread extends Thread{
 	    }
 	    return true;
 	}
-	public void suspender() {
-		suspender=true;
+	public static void suspender(boolean b) {
+		suspender=b;
 	}
 
 	public List<Integer> getPrimes() {

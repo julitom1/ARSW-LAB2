@@ -1,7 +1,5 @@
 package edu.eci.arsw.primefinder;
 
-
-
 public class Time implements Runnable{
 	public Time(){}
 	
@@ -10,13 +8,8 @@ public class Time implements Runnable{
 	public void run() {
 	
 		
-		try {
-		
-			Main.DetenerHilos();
-		} catch (InterruptedException e) {
-			
-			e.printStackTrace();
-		} 
+		PrimeFinderThread.suspender(true);
+		Main.seguirHilo();
 	}
 	
 
