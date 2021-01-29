@@ -144,6 +144,7 @@ public class Canodromo extends JFrame {
 	 * @param action
 	 */
 	public void setStopAction(ActionListener action) {
+		
 		butStop.addActionListener(action);
 	}
 
