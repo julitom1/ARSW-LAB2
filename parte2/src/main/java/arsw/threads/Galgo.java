@@ -19,7 +19,7 @@ public class Galgo extends Thread {
 		this.regl=reg;
 	}
 
-	public  void corra() throws InterruptedException {
+	public void corra() throws InterruptedException {
 		while (paso < carril.size()) {	
 			if(!stop) {
 				
@@ -29,22 +29,21 @@ public class Galgo extends Thread {
 					carril.displayPasos(paso);
 				
 			
-				if (paso == carril.size()) {						
-					carril.finish();
-					int ubicacion=regl.getUltimaPosicionAlcanzada();
-					regl.setUltimaPosicionAlcanzada(ubicacion+1);
-					System.out.println("El galgo "+this.getName()+" llego en la posicion "+ubicacion);
-					if (ubicacion==1){
-						regl.setGanador(this.getName());
+				if (paso == carril.size()) {	
+					synchronized(regl){
+						carril.finish();
+						int ubicacion=regl.getUltimaPosicionAlcanzada();
+						regl.setUltimaPosicionAlcanzada(ubicacion+1);
+						System.out.println("El galgo "+this.getName()+" llego en la posicion "+ubicacion);
+						if (ubicacion==1){
+							regl.setGanador(this.getName());
+						}
 					}
-					
 				}
-			}else {
-		
+			}else{
 				synchronized(this){
 					wait();
 				}
-				
 			}
 		}
 	}
