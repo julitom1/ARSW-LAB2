@@ -18,7 +18,7 @@ Creación, puesta en marcha y coordinación de hilos.
 
 3. Lo que se le ha pedido es: debe modificar la aplicación de manera que cuando hayan transcurrido 5 segundos desde que se inició la ejecución, se detengan todos los hilos y se muestre el número de primos encontrados hasta el momento. Luego, se debe esperar a que el usuario presione ENTER para reanudar la ejecución de los mismo.
 
-![](./img/media/image6.png)
+![](./img/media/image6.PNG)
 
 ### Parte II 
 
@@ -48,7 +48,7 @@ Parte III
 
     b.  Puede utilizarse el método join() de la clase Thread para sincronizar el hilo que inicia la carrera, con la finalización de los hilos de los galgos.
 
-![](./img/media/image3.png)
+![](./img/media/image3.PNG)
 
 2.  Una vez corregido el problema inicial, corra la aplicación varias
     veces, e identifique las inconsistencias en los resultados de las
@@ -68,8 +68,8 @@ Parte III
 
 ## Stop
 
-![](./img/media/image4.png)
+![](./img/media/image4.PNG)
 
 ## Continue
 
-![](./img/media/image5.png)
+![](./img/media/image5.PNG)
