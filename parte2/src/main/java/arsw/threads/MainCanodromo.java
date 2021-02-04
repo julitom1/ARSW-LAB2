@@ -66,10 +66,7 @@ public class MainCanodromo {
                     @Override
                     public void actionPerformed(ActionEvent e) {
                         System.out.println("Carrera pausada!");
-                        
-                        	Galgo.setStop(true);
-                       
-                        	
+                        Galgo.setStop(true);
                     }
                 }
         );
